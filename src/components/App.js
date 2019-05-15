@@ -7,12 +7,9 @@ class App extends React.Component {
   state = { value: null, time: null };
 
   getValue = async index => {
-    if (index <= 12) {
-      const response = await fibonacci.post('/fib', { index });
-      const { value, time } = response.data;
-
-      this.setState({ value, time });
-    }
+    const response = await fibonacci.post('/fib', { index });
+    const { value, time } = response.data;
+    this.setState({ value, time });
   };
 
   renderContent() {
