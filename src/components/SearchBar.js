@@ -11,7 +11,7 @@ class SearchBar extends React.Component {
   onFormSubmit = event => {
     event.preventDefault();
     const index = this.state.index;
-    if (index !== '') {
+    if (index !== '' && index <= 12) {
       this.props.getValue(index);
     }
   };
