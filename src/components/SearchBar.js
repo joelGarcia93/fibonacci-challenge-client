@@ -5,12 +5,10 @@ class SearchBar extends React.Component {
   state = { index: '', max: '' };
 
   onInputIndexChange = event => {
-    console.log('a');
     this.setState({ index: event.target.value });
   };
 
   onInputMaxChange = event => {
-    console.log('b');
     this.setState({ max: event.target.value });
   };
 
