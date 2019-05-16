@@ -6,8 +6,8 @@ import fibonacci from '../apis/fibonacci';
 class App extends React.Component {
   state = { value: null, time: null };
 
-  getValue = async index => {
-    const response = await fibonacci.post('/fib', { index });
+  getValue = async (index, max) => {
+    const response = await fibonacci.post('/fib', { index, max });
     const { value, time } = response.data;
     this.setState({ value, time });
   };
